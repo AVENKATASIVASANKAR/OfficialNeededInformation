@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;margin:5%;background-color:#9E4784">
+    <!-- <h1 id="demo">arrays and objects</h1> -->
+    
+    <form id="form-test">
+        <label style="color:white">Username</label>
+        <br><br>
+        <input id="username" value="" type="username">
+        <br><br>
+        <label style="color:white">Password</label>
+        <br><br>
+        <input id="password" value="" type="password">
+        <br><br>
+        <button style="background-color: blue;color:white;" id="submit" onclick="javascript:sankarEdu()" type="submit">Sankar</button>
+        <button style="background-color: red;color:white;" id="submit" onclick="javascript:surendraPLAN()" type="submit">surendra</button>
+        <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">admin</button>
+        
+    </form>
+    
+
+    <!-- <form id="form-test">
+        <label>Username</label>
+        <br><br>
+        <input id="username" value="" type="username">
+        <br><br>
+        <label>Password</label>
+        <br><br>
+        <input id="password" value="" type="password">
+        <br><br>
+        
+        
+</form>
+<form id="form-test">
+    <label>Username</label>
+    <br><br>
+    <input id="username" value="" type="username">
+    <br><br>
+    <label>Password</label>
+    <br><br>
+    <input id="password" value="" type="password">
+    <br><br>
+    
+
+</form>
+     -->
+     
+     
+    <script>
+        
+        var vinayakanagar={
+        Education:{
+            
+            NAME:"A VENKATA SIVASANKAR",
+            DESIGNATION:"WARD EDUCATION SECRETARY",
+            DOB:"1996/APRIL/7",
+            CFMS:"14859465",
+            HRMS:"1259144",
+            MOBILE:"9581171303",
+            ADHAR:"367500637210",
+            },
+        ADMIN:{
+            NAME:"B ESWAR REDDY",
+            DESIGNATION:"WARD ADMIN SECRETARY",
+            DOB:"1988/JULY/15",
+            CFMS:"14855828",
+            HRMS:"1258734",
+            MOBILE:"8309433107",
+            ADHAR:"763920860452",
+        },
+        PLANNING:{
+            NAME:"N SURENDRA ",
+            DESIGNATION:"WARD PLANNING SECRETARY",
+            DOB:"1992/JUNE/08",
+            CFMS:"14859461",
+            HRMS:"1259143",
+            MOBILE:"9949263604",
+            ADHAR:"793831351248",
+        },
+        
+        }
+
+    var    userName=document.getElementById('userName');
+    var    passWord=document.getElementById('passWord');
+
+
+
+
+   var sankar= document.getElementById('sankar');
+   var admin=document.getElementById('admin');
+   var surendra=document.getElementById('surendra');
+
+
+
+   function sankarEdu(){
+
+    if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
+                                                                
+    document.write("NAME: "+vinayakanagar.Education.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.Education.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.Education.DOB+"<br> "+"CFMS: "+vinayakanagar.Education.CFMS+"<br> "+"HRMS: "+vinayakanagar.Education.HRMS+"<br> "+"MOBILE: " +vinayakanagar.Education.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.Education.ADHAR);
+
+}
+
+else{
+
+    var audio=new Audio('wrongpassword.mp3');
+
+    audio.play();
+    document.write('<br>');
+    alert('wrong credentials')
+
+}
+   }
+
+
+
+
+
+   function eADMIN(){
+    if(   document.getElementById("username").value == "Eswar"
+&& document.getElementById("password").value == "Admin" ){
+    document.write("NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR);
+   }
+   else{
+    var audio=new Audio('wrongpassword.mp3');
+    audio.play();
+    document.write('<br>');
+    alert('wrong credentials')
+}
+}
+   
+   function surendraPLAN(){
+    if(   document.getElementById("username").value == "Surendra"
+&& document.getElementById("password").value == "Plan" ){
+        document.writE("NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR);
+   }
+   
+   else{
+    var audio=new Audio('wrongpassword.mp3');
+    audio.play();
+    document.write('<br>');
+    alert('wrong credentials')
+}
+}
+   
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
