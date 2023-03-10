@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NEEDED DATA </title>
 </head>
 <body style="text-align: center;margin:5%;background-color:#9E4784">
     <!-- <h1 id="demo">arrays and objects</h1> -->
     
-    <form id="form-test">
+    
         <label style="color:white">Username</label>
         <br><br>
         <input id="username" value="" type="username">
@@ -21,9 +21,11 @@
         <button style="background-color: blue;color:white;" id="submit" onclick="javascript:sankarEdu()" type="submit">Sankar</button>
         <button style="background-color: red;color:white;" id="submit" onclick="javascript:surendraPLAN()" type="submit">surendra</button>
         <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">admin</button>
-        
-    </form>
-    
+        <br><br>
+        <input id="input" type="input" value=""placeholder="what do you want ?" name="inputval"> 
+        <P>(NAME,DESIGNATION,HRMS,CFMS,MOBILE,ADHAR)</P>
+
+    <p id="displayName"></p>
 
     <!-- <form id="form-test">
         <label>Username</label>
@@ -101,9 +103,13 @@
    function sankarEdu(){
 
     if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
-                                                                
-    document.write("NAME: "+vinayakanagar.Education.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.Education.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.Education.DOB+"<br> "+"CFMS: "+vinayakanagar.Education.CFMS+"<br> "+"HRMS: "+vinayakanagar.Education.HRMS+"<br> "+"MOBILE: " +vinayakanagar.Education.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.Education.ADHAR);
-
+                                                               
+    //  var result1="NAME: "+vinayakanagar.Education.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.Education.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.Education.DOB+"<br> "+"CFMS: "+vinayakanagar.Education.CFMS+"<br> "+"HRMS: "+vinayakanagar.Education.HRMS+"<br> "+"MOBILE: " +vinayakanagar.Education.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.Education.ADHAR;
+                         
+    let  sankar = document.getElementById('input').value.toUpperCase();
+    let result = vinayakanagar.Education[sankar];
+    document.getElementById("displayName").textContent = result;
+    
 }
 
 else{
@@ -124,8 +130,11 @@ else{
    function eADMIN(){
     if(   document.getElementById("username").value == "Eswar"
 && document.getElementById("password").value == "Admin" ){
-    document.write("NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR);
-   }
+    // document.write("NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR);
+    let  sankar = document.getElementById('input').valuetoUpperCase();
+    let result = vinayakanagar.ADMIN[sankar];
+    document.getElementById("displayName").textContent = result;   
+}
    else{
     var audio=new Audio('wrongpassword.mp3');
     audio.play();
@@ -137,8 +146,11 @@ else{
    function surendraPLAN(){
     if(   document.getElementById("username").value == "Surendra"
 && document.getElementById("password").value == "Plan" ){
-        document.writE("NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR);
-   }
+        // document.writE("NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR);
+        let  sankar = document.getElementById('input').value.toUpperCase();
+    let result = vinayakanagar.PLANNING[sankar];
+    document.getElementById("displayName").textContent = result;
+    }
    
    else{
     var audio=new Audio('wrongpassword.mp3');
@@ -147,7 +159,7 @@ else{
     alert('wrong credentials')
 }
 }
-   
+
     </script>
 </body>
 </html>
