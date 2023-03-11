@@ -26,8 +26,8 @@
         <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">admin</button>
         <br><br>
         <button style="background-color: blue;color:white;" id="submit" onclick="javascript:allEdu()" type="submit">SankarAll</button>
-        <button style="background-color: red;color:white;" id="submit" onclick="javascript:surendraPLAN()" type="submit">surendraAll</button>
-        <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">adminAll</button>
+        <button style="background-color: red;color:white;" id="submit" onclick="javascript:allPLAN()" type="submit">surendraAll</button>
+        <button style="background-color: green;color:white;"id="submit" onclick="javascript:allADMIN()" type="submit">adminAll</button>
     
     
 
@@ -149,8 +149,8 @@ else{
 
 
    function allADMIN(e){
-            if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
-
+    if(   document.getElementById("username").value == "Eswar"
+&& document.getElementById("password").value == "Admin" ){
             document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR;
             document.getElementById('demo2').style.color='white';
             }
@@ -190,10 +190,10 @@ else{
 }
 
 
-function allADMIN(e){
-            if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
-
-            document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR;
+function allPLAN(e){
+    if(   document.getElementById("username").value == "Surendra"
+&& document.getElementById("password").value == "Plan" ){
+               document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR;
             document.getElementById('demo2').style.color='white';
             }
             else{
