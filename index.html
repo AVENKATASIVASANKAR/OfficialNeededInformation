@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEEDED DATA </title>
+    <title>Document</title>
 </head>
 <body style="text-align: center;margin:5%;background-color:#9E4784">
-    <!-- <h1 id="demo">arrays and objects</h1> -->
+    <h2 id="demo2">All data </h2>
+    <h1 id="demo">arrays and objects</h1>
     
-    
+    <P>(NAME,DESIGNATION,MOBILE,ADHAR,HRMS,CFMS)</P>
         <label style="color:white">Username</label>
         <br><br>
         <input id="username" value="" type="username">
@@ -18,14 +19,17 @@
         <br><br>
         <input id="password" value="" type="password">
         <br><br>
+        <input id="specify" value=""placeholder="enter what you want?">
+        <br><br>
         <button style="background-color: blue;color:white;" id="submit" onclick="javascript:sankarEdu()" type="submit">Sankar</button>
         <button style="background-color: red;color:white;" id="submit" onclick="javascript:surendraPLAN()" type="submit">surendra</button>
         <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">admin</button>
         <br><br>
-        <input id="input" type="input" value=""placeholder="what do you want ?" name="inputval"> 
-        <P>(NAME,DESIGNATION,HRMS,CFMS,MOBILE,ADHAR)</P>
-
-    <p id="displayName"></p>
+        <button style="background-color: blue;color:white;" id="submit" onclick="javascript:allEdu()" type="submit">SankarAll</button>
+        <button style="background-color: red;color:white;" id="submit" onclick="javascript:surendraPLAN()" type="submit">surendraAll</button>
+        <button style="background-color: green;color:white;"id="submit" onclick="javascript:eADMIN()" type="submit">adminAll</button>
+    
+    
 
     <!-- <form id="form-test">
         <label>Username</label>
@@ -98,18 +102,35 @@
    var admin=document.getElementById('admin');
    var surendra=document.getElementById('surendra');
 
+        function allEdu(e){
+            if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
+
+            document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.Education.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.Education.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.Education.DOB+"<br> "+"CFMS: "+vinayakanagar.Education.CFMS+"<br> "+"HRMS: "+vinayakanagar.Education.HRMS+"<br> "+"MOBILE: " +vinayakanagar.Education.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.Education.ADHAR;
+            document.getElementById('demo2').style.color='white';
+            }
+            else{
+                
+            var audio=new Audio('wrongpassword.mp3');
+
+            audio.play();
+            document.write('<br>');
+            alert('wrong credentials')
+              }
+        }
 
 
-   function sankarEdu(){
 
-    if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
-                                                               
-    //  var result1="NAME: "+vinayakanagar.Education.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.Education.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.Education.DOB+"<br> "+"CFMS: "+vinayakanagar.Education.CFMS+"<br> "+"HRMS: "+vinayakanagar.Education.HRMS+"<br> "+"MOBILE: " +vinayakanagar.Education.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.Education.ADHAR;
-                         
-    let  sankar = document.getElementById('input').value.toUpperCase();
-    let result = vinayakanagar.Education[sankar];
-    document.getElementById("displayName").textContent = result;
+
+   function sankarEdu(e){
     
+    if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
+           let info=document.getElementById('specify').value.toUpperCase();
+           let result=vinayakanagar.Education[info];
+        
+           document.getElementById('demo').textContent=result; 
+            document.getElementById('demo').style.color='white';
+            
+
 }
 
 else{
@@ -121,49 +142,94 @@ else{
     alert('wrong credentials')
 
 }
+
    }
 
 
 
 
+   function allADMIN(e){
+            if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
 
-   function eADMIN(){
+            document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR;
+            document.getElementById('demo2').style.color='white';
+            }
+            else{
+                
+            var audio=new Audio('wrongpassword.mp3');
+
+            audio.play();
+            document.write('<br>');
+            alert('wrong credentials')
+              }
+        }
+
+
+
+
+
+   function eADMIN(e){
+    
     if(   document.getElementById("username").value == "Eswar"
 && document.getElementById("password").value == "Admin" ){
-    // document.write("NAME: "+vinayakanagar.ADMIN.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.ADMIN.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.ADMIN.DOB+"<br> "+"CFMS: "+vinayakanagar.ADMIN.CFMS+"<br> "+"HRMS: "+vinayakanagar.ADMIN.HRMS+"<br> "+"MOBILE: " +vinayakanagar.ADMIN.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.ADMIN.ADHAR);
-    let  sankar = document.getElementById('input').valuetoUpperCase();
-    let result = vinayakanagar.ADMIN[sankar];
-    document.getElementById("displayName").textContent = result;   
-}
+
+    let info=document.getElementById('specify').value.toUpperCase();
+           let result=vinayakanagar.ADMIN[info];
+        
+           document.getElementById('demo').textContent=result; 
+            document.getElementById('demo').style.color='white';
+
+   }
    else{
     var audio=new Audio('wrongpassword.mp3');
     audio.play();
     document.write('<br>');
     alert('wrong credentials')
-}
-}
-   
-   function surendraPLAN(){
-    if(   document.getElementById("username").value == "Surendra"
-&& document.getElementById("password").value == "Plan" ){
-        // document.writE("NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR);
-        let  sankar = document.getElementById('input').value.toUpperCase();
-    let result = vinayakanagar.PLANNING[sankar];
-    document.getElementById("displayName").textContent = result;
-    }
-   
-   else{
-    var audio=new Audio('wrongpassword.mp3');
-    audio.play();
-    document.write('<br>');
-    alert('wrong credentials')
+
 }
 }
 
+
+function allADMIN(e){
+            if(   document.getElementById("username").value == "sankar" && document.getElementById("password").value == "SANKAR" ){
+
+            document.getElementById("demo2").innerHTML="NAME: "+vinayakanagar.PLANNING.NAME+"<br>" +"DESIGNATION: "+vinayakanagar.PLANNING.DESIGNATION+"<br> "+"DOB:"+vinayakanagar.PLANNING.DOB+"<br> "+"CFMS: "+vinayakanagar.PLANNING.CFMS+"<br> "+"HRMS: "+vinayakanagar.PLANNING.HRMS+"<br> "+"MOBILE: " +vinayakanagar.PLANNING.MOBILE+"<br> "+" ADHAR: " + vinayakanagar.PLANNING.ADHAR;
+            document.getElementById('demo2').style.color='white';
+            }
+            else{
+                
+            var audio=new Audio('wrongpassword.mp3');
+
+            audio.play();
+            document.write('<br>');
+            alert('wrong credentials')
+              }
+        }
+
+
+
+   
+   function surendraPLAN(e){
+    
+    if(   document.getElementById("username").value == "Surendra"
+&& document.getElementById("password").value == "Plan" ){
+    let info=document.getElementById('specify').value.toUpperCase();
+           let result=vinayakanagar.PLANNING[info];
+        
+           document.getElementById('demo').textContent=result; 
+            document.getElementById('demo').style.color='white';   }
+   
+   else{
+    var audio=new Audio('wrongpassword.mp3');
+    audio.play();
+    document.write('<br>');
+    alert('wrong credentials')
+}
+}
+   
     </script>
 </body>
 </html>
-
 
 
 
